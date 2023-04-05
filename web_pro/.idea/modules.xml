@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/maven_project01/maven_project01.iml" filepath="$PROJECT_DIR$/maven_project01/maven_project01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_web_quickstart/springboot_web_quickstart.iml" filepath="$PROJECT_DIR$/springboot_web_quickstart/springboot_web_quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_web_quickstart01/springboot_web_quickstart01.iml" filepath="$PROJECT_DIR$/springboot_web_quickstart01/springboot_web_quickstart01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sprintboot_web_quickstart01/sprintboot_web_quickstart01.iml" filepath="$PROJECT_DIR$/sprintboot_web_quickstart01/sprintboot_web_quickstart01.iml" />
       <module fileurl="file://$PROJECT_DIR$/web_pro.iml" filepath="$PROJECT_DIR$/web_pro.iml" />
     </modules>
   </component>
