@@ -5,10 +5,7 @@ package com.example.springboot_web_req_resp.controller;
 
 import com.example.springboot_web_req_resp.pojo.User;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
@@ -68,10 +65,25 @@ public class RequestController {
         return "OK";
     }
 
-    //5json参数
+    //5.json参数
     @RequestMapping("/jsonParam")
     public String jsonParam(@RequestBody User user){
         System.out.println(user);
+        return "OK";
+    }
+
+    //6.路径参数
+    @RequestMapping("/path/{id}")
+    public String pathParam(@PathVariable Integer id){
+        System.out.println(id);
+        return "OK";
+    }
+
+    //路径参数
+    @RequestMapping("/path/{id}/{name}")
+    public String pathParam2(@PathVariable Integer id,@PathVariable String name){
+        System.out.println(id);
+        System.out.println(name);
         return "OK";
     }
 }
