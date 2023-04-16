@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+input[type=text] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button[type=submit] {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #3e8e41;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+}
