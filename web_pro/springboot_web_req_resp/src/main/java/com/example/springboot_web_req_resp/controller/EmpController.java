@@ -6,6 +6,7 @@ import com.example.springboot_web_req_resp.pojo.Result;
 import com.example.springboot_web_req_resp.service.EmpService;
 import com.example.springboot_web_req_resp.service.impl.EmpServiceA;
 import com.example.springboot_web_req_resp.utils.XmlParserUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +14,10 @@ import java.util.List;
 
 @RestController
 public class EmpController {
-    private EmpService empService=new EmpServiceA();
+
+    @Autowired//运行时，ioc容器会提供该类型的bean对象并且赋值给该变量--依赖注入
+    private EmpService empService;
+
     @RequestMapping("/listEmp")
     public Result list(){
         //调用service

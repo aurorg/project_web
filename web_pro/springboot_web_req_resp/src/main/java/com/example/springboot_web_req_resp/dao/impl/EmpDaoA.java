@@ -3,9 +3,13 @@ package com.example.springboot_web_req_resp.dao.impl;
 import com.example.springboot_web_req_resp.dao.EmpDao;
 import com.example.springboot_web_req_resp.pojo.Emp;
 import com.example.springboot_web_req_resp.utils.XmlParserUtils;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
+//@Component //将当前类交给ioc容器管理，称为ioc容器中的bean
 public class EmpDaoA implements EmpDao {
 
     @Override
