@@ -10,7 +10,7 @@ import java.util.List;
 public interface UserMapper {
 
     //查询全部用户信息
-    @Select("select * from mybatis.user")
+    @Select("select * from  mybatis.user")
     public List<User> list();
 
 }
