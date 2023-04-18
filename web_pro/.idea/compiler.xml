@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot_mybatis_quickstart" />
         <module name="springboot_web_req_resp" />
         <module name="springboot_web_quickstart01" />
         <module name="sprintboot_web_quickstart01" />
@@ -14,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="maven_project01" target="11" />
+      <module name="springboot_mybatis_quickstart" target="11" />
       <module name="springboot_web_quickstart" target="11" />
       <module name="springboot_web_quickstart01" target="11" />
       <module name="springboot_web_quickstart01 (1)" target="17" />
@@ -23,6 +25,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot_mybatis_quickstart" options="-parameters" />
       <module name="springboot_web_quickstart" options="-parameters" />
       <module name="springboot_web_quickstart01" options="-parameters" />
       <module name="springboot_web_quickstart01 (1)" options="-parameters" />
