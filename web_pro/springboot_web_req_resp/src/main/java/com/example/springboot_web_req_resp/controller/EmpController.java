@@ -23,7 +23,6 @@ public class EmpController {
         //调用service
         List<Emp> empList=empService.listEmp();
 
-
         //3. 响应数据
         return Result.success(empList);
 
