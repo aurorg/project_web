@@ -21,4 +21,11 @@ public interface EmpMapper {
     //更新数据
     @Update("update mybatis.emp set username=#{username},name=#{name},gender=#{gender},image=#{image},job=#{job},entrydate=#{entrydate},dept_id=#{deptId},update_time=#{updateTime}  where id=#{id};")
     public void update(Emp emp);
+
+
+    //根据id查询员工
+    @Select("select * from mybatis.emp where id= #{id}")
+     public Emp getById(Integer id);
+
+
 }

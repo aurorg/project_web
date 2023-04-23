@@ -60,5 +60,11 @@ class SpringbootMybatisCrudApplicationTests {
 
     }
 
+    @Test
+    public void testGetById(){
+        Emp emp=empMapper.getById(10);
+        System.out.println(emp);
+    }
+
 
 }
