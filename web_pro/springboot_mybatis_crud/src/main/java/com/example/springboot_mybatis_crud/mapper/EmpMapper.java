@@ -60,6 +60,9 @@ public interface EmpMapper {
 //            "entrydate between #{begin} and #{end} order by update_time desc")
 //    public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
 
-    public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
+    public List<Emp> list(String name, Short gender, LocalDate begin,LocalDate end);
+
+    //动态更新数据
+    public void update2(Emp emp);
 
 }

@@ -16,9 +16,9 @@ public class Emp {
     private String username; //用户名
     private String password; //密码
     private String name;  //姓名
-    private Short gender; //性别，1男，2女
+    private short gender; //性别，1男，2女
     private String image;//图像url
-    private Short job; //职位，1班主任，2讲师，3学生主管，4教研主管，5咨询师
+    private short job; //职位，1班主任，2讲师，3学生主管，4教研主管，5咨询师
     private LocalDate entrydate; //入职日期
     private Integer deptId; //部门id
     private LocalDateTime createTime; //创建时间

@@ -3,10 +3,54 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.springboot_mybatis_crud.mapper.EmpMapper">
-<!--     resultType： 单条记录封装的类型-->
+    <update id="update2">
+        update mybatis.emp
+        set
+         <if test="username !=null">
+            username=#{username},
+         </if>
+         <if test="name !=null">
+            name=#{name},
+         </if>
+        <if test="gender !=null">
+            gender=#{gender},
+        </if>
+        <if test="image !=null">
+            image=#{image},
+        </if>
+        <if test="job !=null">
+            job=#{job},
+        </if>
+        <if test="entrydate !=null">
+            entrydate=#{entrydate},
+        </if>
+        <if test="dept_id !=null">
+            dept_id=#{deptId},
+        </if>
+        <if test="update_time !=null">
+            update_time=#{updateTime}
+        </if>
+        where id = #{id}
+    </update>
+    <!--     resultType： 单条记录封装的类型-->
+<!--    动态条件查询-->
     <select id="list" resultType="com.example.springboot_mybatis_crud.pojo.Emp">
-        select * from mybatis.emp where name like concat('%' ,#{name},'%') and gender = #{gender}
-            and entrydate between #{begin} and #{end} order by update_time desc
+        select *
+        from mybatis.emp
+        <where>
+              <if test="name !=null">
+                  name like concat('%',#{name},'%')
+              </if>
+
+              <if test="gender !=null">
+                  and gender =#{gender}
+              </if>
+
+              <if test="begin !=null and end !=null">
+                  and entrydate between #{begin} and #{end}
+              </if>
+    </where>
+        order by update_time desc
     </select>
     
 </mapper>

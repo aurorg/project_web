@@ -70,8 +70,25 @@ class SpringbootMybatisCrudApplicationTests {
 
     @Test
     public void testList(){
-        List<Emp> emplist=empMapper.list("张", Short.parseShort("1"),LocalDate.of(2010,1,1),LocalDate.of(2020,1,1));
+//        List<Emp> emplist=empMapper.list("张", Short.parseShort("1"),LocalDate.of(2010,1,1),LocalDate.of(2020,1,1));
+        List<Emp> emplist=empMapper.list("张",null,null,null);
         System.out.println(emplist);
     }
 
+
+    @Test
+    public void testUpdate2(){
+        //构造员工对象
+        Emp emp=new Emp();
+        emp.setId(14);
+        emp.setUsername("Tom14");
+        emp.setName("汤姆14");
+        emp.setGender((short)2);
+        emp.setUpdateTime(LocalDateTime.now());
+
+
+        //执行更新员工操作
+        empMapper.update(emp);
+
+    }
 }
