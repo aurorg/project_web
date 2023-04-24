@@ -56,9 +56,10 @@ public interface EmpMapper {
 
 
         //条件查询员工
-    @Select("select * from mybatis.emp where name like concat('%' ,#{name},'%') and gender = #{gender} and " +
-            "entrydate between #{begin} and #{end} order by update_time desc")
-    public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
+//    @Select("select * from mybatis.emp where name like concat('%' ,#{name},'%') and gender = #{gender} and " +
+//            "entrydate between #{begin} and #{end} order by update_time desc")
+//    public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
 
+    public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
 
 }
