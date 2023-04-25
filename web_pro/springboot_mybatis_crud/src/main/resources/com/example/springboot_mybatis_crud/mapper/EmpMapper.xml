@@ -32,6 +32,7 @@
         </if>
         where id = #{id}
     </update>
+
     <!--     resultType： 单条记录封装的类型-->
 <!--    动态条件查询-->
     <select id="list" resultType="com.example.springboot_mybatis_crud.pojo.Emp">
@@ -52,5 +53,20 @@
     </where>
         order by update_time desc
     </select>
+
+<!--    批量删除员工(10,11,12)
+        collection:遍历的集合
+        item:遍历出来的元素
+        separator:分隔符
+        open：遍历开始前拼接的sql片段
+        close:遍历结束后拼接的sql片段
+
+-->
+    <delete id="deleteByIds">
+        delete from mybatis.emp where id in
+        <foreach collection="ids" item="id"  separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
     
 </mapper>

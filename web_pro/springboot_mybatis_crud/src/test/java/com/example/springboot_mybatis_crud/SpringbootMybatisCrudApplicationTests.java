@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest
@@ -76,6 +77,8 @@ class SpringbootMybatisCrudApplicationTests {
     }
 
 
+
+//更新有问题
     @Test
     public void testUpdate2(){
         //构造员工对象
@@ -90,5 +93,12 @@ class SpringbootMybatisCrudApplicationTests {
         //执行更新员工操作
         empMapper.update(emp);
 
+    }
+
+    //批量删除员工
+    @Test
+    public void testDeleteByIds(){
+        List<Integer> ids= Arrays.asList(13,14,15);
+        empMapper.deleteByIds(ids);
     }
 }
