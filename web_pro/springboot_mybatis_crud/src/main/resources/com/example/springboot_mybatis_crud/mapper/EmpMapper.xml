@@ -3,6 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.springboot_mybatis_crud.mapper.EmpMapper">
+
+    <sql id="commonSelect">
+        select id,id, username, password, name, gender, image, job, entrydate, dept_id, create_time, update_time
+        from mybatis.emp
+    </sql>
+
     <update id="update2">
         update mybatis.emp
         set
@@ -36,8 +42,7 @@
     <!--     resultType： 单条记录封装的类型-->
 <!--    动态条件查询-->
     <select id="list" resultType="com.example.springboot_mybatis_crud.pojo.Emp">
-        select *
-        from mybatis.emp
+         <include refid="commonSelect"/>
         <where>
               <if test="name !=null">
                   name like concat('%',#{name},'%')
