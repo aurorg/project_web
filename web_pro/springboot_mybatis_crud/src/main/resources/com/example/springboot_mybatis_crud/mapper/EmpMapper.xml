@@ -65,8 +65,8 @@
         separator:分隔符
         open：遍历开始前拼接的sql片段
         close:遍历结束后拼接的sql片段
-
 -->
+
     <delete id="deleteByIds">
         delete from mybatis.emp where id in
         <foreach collection="ids" item="id"  separator="," open="(" close=")">

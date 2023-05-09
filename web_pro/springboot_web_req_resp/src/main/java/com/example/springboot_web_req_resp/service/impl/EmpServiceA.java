@@ -21,7 +21,8 @@ import java.util.List;
 //@Component //将当前类交给ioc容器管理，称为ioc容器中的bean
 public class EmpServiceA implements EmpService {
 
-    @Autowired//运行时，ioc容器会提供该类型的bean对象并且赋值给该变量--依赖注入
+    @Autowired
+    //运行时，ioc容器会提供该类型的bean对象并且赋值给该变量--依赖注入
     private EmpDao empDao;
 
     @Override
