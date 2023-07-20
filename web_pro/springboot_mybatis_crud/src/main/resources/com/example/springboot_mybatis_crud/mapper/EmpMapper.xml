@@ -5,7 +5,7 @@
 <mapper namespace="com.example.springboot_mybatis_crud.mapper.EmpMapper">
 
     <sql id="commonSelect">
-        select id,id, username, password, name, gender, image, job, entrydate, dept_id, create_time, update_time
+        select id,id, username,password,name, gender, image, job, entrydate, dept_id, create_time, update_time
         from mybatis.emp
     </sql>
 

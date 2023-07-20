@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_mybatis_quickstart" />
         <module name="springboot_web_req_resp" />
-        <module name="springboot_web_quickstart01" />
         <module name="sprintboot_web_quickstart01" />
-        <module name="maven_project01" />
+        <module name="springboot_web_quickstart01" />
         <module name="springboot_mybatis_crud" />
+        <module name="maven_project01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
