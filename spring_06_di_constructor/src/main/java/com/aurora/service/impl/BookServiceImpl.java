@@ -8,14 +8,9 @@ public class BookServiceImpl implements BookService {
     private BookDao bookDao;
     private UserDao userDao;
 
-
-    //setter注入需要提供要注入对象的set方法
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
-    }
-    //setter注入需要提供要注入对象的set方法
-    public void setBookDao(BookDao bookDao) {
+    public BookServiceImpl(BookDao bookDao, UserDao userDao) {
         this.bookDao = bookDao;
+        this.userDao = userDao;
     }
 
     public void save() {

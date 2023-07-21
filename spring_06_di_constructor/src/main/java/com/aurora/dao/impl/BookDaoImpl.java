@@ -7,16 +7,12 @@ public class BookDaoImpl implements BookDao {
     private String databaseName;
     private int connectionNum;
 
-    //setter注入需要提供要注入对象的set方法
-    public void setConnectionNum(int connectionNum) {
-        this.connectionNum = connectionNum;
-    }
-    //setter注入需要提供要注入对象的set方法
-    public void setDatabaseName(String databaseName) {
+    public BookDaoImpl(String databaseName, int connectionNum) {
         this.databaseName = databaseName;
+        this.connectionNum = connectionNum;
     }
 
     public void save() {
-        System.out.println("book dao save ..."+databaseName+","+connectionNum);
+        System.out.println("book dao save ..." + databaseName +"," +connectionNum);
     }
 }

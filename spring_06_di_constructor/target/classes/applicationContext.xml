@@ -3,26 +3,34 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
- <!-- 注入简单类型-->
-    <bean id="bookDao" class="com.aurora.dao.impl.BookDaoImpl">
-        <!--property标签：设置注入属性-->
-        <!--name属性：设置注入的属性名，实际是set方法对应的名称-->
-        <!--value属性：设置注入简单类型数据值-->
+<!--标准书写-->
+<!--    <bean id="bookDao" class="com.aurora.dao.impl.BookDaoImpl">-->
+<!--        <constructor-arg name="databaseName" value="mysql"></constructor-arg>-->
+<!--        <constructor-arg name="connectionNum" value="999"></constructor-arg>-->
+<!--    </bean>-->
 
-        <property name="connectionNum" value="100"></property>
-        <property name="databaseName" value="mysql"></property>
+<!--    <bean id="userDao" class="com.aurora.dao.impl.UserDaoImpl"></bean>-->
 
-    </bean>
 
-    <bean id="userDao" class="com.aurora.dao.impl.UserDaoImpl"></bean>
+<!--    <bean id="bookService" class="com.aurora.service.impl.BookServiceImpl">-->
+<!--        <constructor-arg name="bookDao" ref="bookDao"></constructor-arg>-->
+<!--        <constructor-arg name="userDao" ref="userDao"></constructor-arg>-->
+<!--    </bean>-->
 
-    <!-- 注入引用类型-->
-    <bean id="bookService" class="com.aurora.service.impl.BookServiceImpl">
-    <!--property标签：设置注入属性-->
-    <!--name属性：设置注入的属性名，实际是set方法对应的名称-->
-    <!--ref属性：设置注入引用类型bean的id或name-->
-        <property name="bookDao" ref="bookDao"></property>
-        <property name="userDao" ref="userDao"></property>
-    </bean>
+        <bean id="bookDao" class="com.aurora.dao.impl.BookDaoImpl">
+            <constructor-arg type="java.lang.String" value="mysql"></constructor-arg>
+            <constructor-arg type="int" value="999"></constructor-arg>
+        </bean>
+
+        <bean id="userDao" class="com.aurora.dao.impl.UserDaoImpl"></bean>
+
+
+        <bean id="bookService" class="com.aurora.service.impl.BookServiceImpl">
+            <constructor-arg name="bookDao" ref="bookDao"></constructor-arg>
+            <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+        </bean>
+
+
+
 
 </beans>
