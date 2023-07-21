@@ -11,5 +11,17 @@
     bean定义时id属性在同一个上下文中(配置文件)不能重复！！！
     -->
     <bean id="bookDao" class="com.aurora.dao.impl.BookDaoImpl"></bean>
-    <bean id="bookService" class="com.aurora.service.impl.BookServiceImpl"></bean>
+    <bean id="bookService" class="com.aurora.service.impl.BookServiceImpl">
+<!-- 7.配置dao与serveice 的关系
+    property标签表示配置当前bean的属性
+    name属性表示配置哪一个具体的属性
+    ref属性表示参照哪一个bean
+-->
+
+
+<!--        <property name="bookDao" ref="bookDao"/>-->
+    </bean>
+
+
+
 </beans>
