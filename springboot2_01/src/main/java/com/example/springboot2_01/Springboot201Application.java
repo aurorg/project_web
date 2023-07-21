@@ -55,7 +55,7 @@ public class Springboot201Application {
         boolean haha = run.containsBean("haha");
         boolean hehe = run.containsBean("hehe");
         System.out.println("haha："+haha);//true
-        System.out.println("hehe："+hehe);//true
+        System.out.println("hehe："+hehe);//tru
 
 
     }
