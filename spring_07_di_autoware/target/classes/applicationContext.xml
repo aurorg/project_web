@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--标准书写-->
+<!--    <bean id="bookDao" class="com.aurora.dao.impl.BookDaoImpl">-->
+<!--        <constructor-arg name="databaseName" value="mysql"></constructor-arg>-->
+<!--        <constructor-arg name="connectionNum" value="999"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="userDao" class="com.aurora.dao.impl.UserDaoImpl"></bean>-->
+
+
+<!--    <bean id="bookService" class="com.aurora.service.impl.BookServiceImpl">-->
+<!--        <constructor-arg name="bookDao" ref="bookDao"></constructor-arg>-->
+<!--        <constructor-arg name="userDao" ref="userDao"></constructor-arg>-->
+<!--    </bean>-->
+
+        <bean id="bookDao" class="com.aurora.dao.impl.BookDaoImpl">
+            <constructor-arg type="java.lang.String" value="mysql"></constructor-arg>
+            <constructor-arg type="int" value="999"></constructor-arg>
+        </bean>
+
+        <bean id="userDao" class="com.aurora.dao.impl.UserDaoImpl"></bean>
+
+
+        <bean id="bookService" class="com.aurora.service.impl.BookServiceImpl">
+            <constructor-arg name="bookDao" ref="bookDao"></constructor-arg>
+            <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+        </bean>
+
+
+
+
+</beans>
