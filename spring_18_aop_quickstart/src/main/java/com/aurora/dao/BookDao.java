@@ -1,4 +1,4 @@
-package com.itheima.dao;
+package com.aurora.dao;
 
 public interface BookDao {
     public void save();

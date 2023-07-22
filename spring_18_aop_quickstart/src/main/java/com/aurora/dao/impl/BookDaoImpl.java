@@ -1,7 +1,6 @@
-package com.itheima.dao.impl;
+package com.aurora.dao.impl;
 
-import com.itheima.dao.BookDao;
-import org.springframework.beans.factory.annotation.Value;
+import com.aurora.dao.BookDao;
 import org.springframework.stereotype.Repository;
 
 @Repository

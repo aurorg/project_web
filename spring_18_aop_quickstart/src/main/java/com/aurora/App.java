@@ -1,7 +1,7 @@
-package com.itheima;
+package com.aurora;
 
-import com.itheima.config.SpringConfig;
-import com.itheima.dao.BookDao;
+import com.aurora.config.SpringConfig;
+import com.aurora.dao.BookDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -11,6 +11,7 @@ public class App {
         BookDao bookDao = ctx.getBean(BookDao.class);
 //        bookDao.update();
         System.out.println(bookDao);
-        System.out.println(bookDao.getClass());
+        System.out.println(bookDao.getClass()); //用的代理
+//        bookDao.save();
     }
 }
