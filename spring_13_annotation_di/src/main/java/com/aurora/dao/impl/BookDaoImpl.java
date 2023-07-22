@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository("bookDao")
 public class BookDaoImpl implements BookDao {
-    @Value("aurora")
+    @Value("${name}")
     private String name;
 
     public void save(){
