@@ -11,7 +11,7 @@ public class MybatisConfig {
     @Bean
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource){
         SqlSessionFactoryBean ssfb = new SqlSessionFactoryBean();
-        ssfb.setTypeAliasesPackage("com.itheima.domain");
+        ssfb.setTypeAliasesPackage("com.aurora.domain");
         ssfb.setDataSource(dataSource);
         return ssfb;
     }
@@ -19,7 +19,7 @@ public class MybatisConfig {
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer msc = new MapperScannerConfigurer();
-        msc.setBasePackage("com.itheima.dao");
+        msc.setBasePackage("com.aurora.dao");
         return msc;
     }
 }
