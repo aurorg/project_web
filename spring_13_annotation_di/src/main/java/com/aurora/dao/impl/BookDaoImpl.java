@@ -1,13 +1,17 @@
 package com.aurora.dao.impl;
 
 import com.aurora.dao.BookDao;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 
-@Repository
+@Repository("bookDao")
 public class BookDaoImpl implements BookDao {
+    @Value("aurora")
+    private String name;
+
     public void save(){
-        System.out.println("book dao save");
+        System.out.println("book dao save" + name);
     }
 }
