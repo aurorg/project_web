@@ -1,6 +1,6 @@
 import com.aurora.config.SpringConfig;
 import com.aurora.domain.Account;
-import com.aurora.service.AccountService;
+import com.aurora.AccountService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

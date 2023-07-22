@@ -1,8 +1,8 @@
-package com.aurora.service.impl;
+package com.aurora.impl;
 
+import com.aurora.AccountService;
 import com.aurora.dao.AccountDao;
 import com.aurora.domain.Account;
-import com.aurora.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

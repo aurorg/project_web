@@ -1,4 +1,4 @@
-package com.aurora.service;
+package com.aurora;
 
 import com.aurora.domain.Account;
 
