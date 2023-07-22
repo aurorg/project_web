@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
- <!--  1.导入spring的坐标spring-context，对应版本是5.2.10-->
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- 2.配置bean
-    bean标签标示配置bean
-    id属性标示给bean起的名字
-    class属性表示给bean定义的类型
-    bean定义时id属性在同一个上下文中(配置文件)不能重复！！！
-    -->
-    <bean id="bookDao" class="com.aurora.dao.impl.BookDaoImpl"></bean>
-    <bean id="bookService" class="com.aurora.service.impl.BookServiceImpl">
-<!-- 7.配置dao与serveice 的关系
-    property标签表示配置当前bean的属性
-    name属性表示配置哪一个具体的属性
-    ref属性表示参照哪一个bean
--->
-
-
-        <property name="bookDao" ref="bookDao"/>
-    </bean>
-
-
-
+    <context:component-scan base-package="com.aurora"/>
 </beans>
