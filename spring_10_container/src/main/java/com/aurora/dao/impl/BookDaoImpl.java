@@ -3,13 +3,11 @@ package com.aurora.dao.impl;
 import com.aurora.dao.BookDao;
 
 public class BookDaoImpl implements BookDao {
-    private String name;
-
-    public void setName(String name) {
-        this.name = name;
+    public BookDaoImpl() {
+        System.out.println("constructor");
     }
 
     public void save() {
-        System.out.println("book dao save ..." + name);
+        System.out.println("book dao save ..." );
     }
 }
