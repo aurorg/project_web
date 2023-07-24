@@ -13,6 +13,7 @@
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
+  <!--1. 导入SpringMVC与servlet的坐标-->
   <dependencies>
     <dependency>
       <groupId>javax.servlet</groupId>
