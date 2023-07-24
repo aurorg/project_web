@@ -1,7 +1,7 @@
-package com.itheima.service.impl;
+package com.aurora.service.impl;
 
-import com.itheima.dao.ResourcesDao;
-import com.itheima.service.ResourcesService;
+import com.aurora.dao.ResourcesDao;
+import com.aurora.service.ResourcesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service

@@ -1,4 +1,4 @@
-package com.itheima.aop;
+package com.aurora.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class DataAdvice {
-    @Pointcut("execution(boolean com.itheima.service.*Service.*(*,*))")
+    @Pointcut("execution(boolean com.aurora.service.*Service.*(*,*))")
     private void servicePt(){}
 
     @Around("DataAdvice.servicePt()")

@@ -1,11 +1,11 @@
-package com.itheima.config;
+package com.aurora.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.aurora")
 @EnableAspectJAutoProxy
 public class SpringConfig {
 }
