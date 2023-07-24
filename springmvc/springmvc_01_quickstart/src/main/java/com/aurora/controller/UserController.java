@@ -22,11 +22,11 @@ public class UserController {
         return "{'module':'springmvc'}";
     }
 
-//    //设置映射路径为/delete，即外部访问路径
-//    @RequestMapping("/delete")
-//    @ResponseBody
-//    public String delete(){
-//        System.out.println("user save ...");
-//        return "{'info':'springmvc'}";
-//    }
+    //设置映射路径为/delete，即外部访问路径
+    @RequestMapping("/delete")
+    @ResponseBody
+    public String delete(){
+        System.out.println("user save ...");
+        return "{'info':'springmvc delete'}";
+    }
 }
