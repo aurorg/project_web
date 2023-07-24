@@ -15,7 +15,7 @@ public class MyAdvice {
 
     //JoinPoint：用于描述切入点的对象，必须配置成通知方法中的第一个参数，
     // 可用于获取原始方法调用的参数
-    @Before("pt()")
+//    @Before("pt()")
     public void before(JoinPoint jp) {
         Object[] args = jp.getArgs();
         System.out.println(Arrays.toString(args));
@@ -30,11 +30,11 @@ public class MyAdvice {
     }
 
     //ProceedingJoinPoint：专用于环绕通知，是JoinPoint子类，可以实现对原始方法的调用
-//    @Around("pt()")
+    @Around("pt()")
     public Object around(ProceedingJoinPoint pjp) {
         Object[] args = pjp.getArgs();
         System.out.println(Arrays.toString(args));
-        args[0] = 666;
+        args[0] = 666;  //处理传过来的参数
         Object ret = null;
         try {
             ret = pjp.proceed(args);
