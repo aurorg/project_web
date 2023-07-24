@@ -12,7 +12,7 @@ public class UserController {
     @ResponseBody
     public String save(){
         System.out.println("user save ...");
-        return "{'module':'user save'}";
+        return "{'module':'user save111111111111'}";
     }
 
     @RequestMapping("/delete")
