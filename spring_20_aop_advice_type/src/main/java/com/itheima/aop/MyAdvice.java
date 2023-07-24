@@ -19,22 +19,26 @@ public class MyAdvice {
     }
 
     //@After：后置通知，在原始方法运行之后执行
-//    @After("pt2()")
+//    @After("pt()")
     public void after() {
         System.out.println("after advice ...");
     }
 
     //@Around：环绕通知，在原始方法运行的前后执行
-//    @Around("pt()")
+    @Around("pt()")
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("around before advice ...");
         //表示对原始操作的调用
         Object ret = pjp.proceed();
         System.out.println("around after advice ...");
-        return ret;
+        return ret; //记得把原始方法的返回值送回去
     }
+//    public void around(){
+//        System.out.println("around before advice...");
+//        System.out.println("around after advice...");
+//    }
 
-//    @Around("pt2()")
+    @Around("pt2()")
     public Object aroundSelect(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("around before advice ...");
         //表示对原始操作的调用
@@ -44,7 +48,7 @@ public class MyAdvice {
     }
 
     //@AfterReturning：返回后通知，在原始方法执行完毕后运行，且原始方法执行过程中未出现异常现象
-//    @AfterReturning("pt2()")
+    @AfterReturning("pt2()")
     public void afterReturning() {
         System.out.println("afterReturning advice ...");
     }
