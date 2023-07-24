@@ -1,9 +1,9 @@
-package com.itheima.config;
+package com.aurora.config;
 
 import org.springframework.context.annotation.*;
 
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.aurora")
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MybatisConfig.class})
 @EnableAspectJAutoProxy

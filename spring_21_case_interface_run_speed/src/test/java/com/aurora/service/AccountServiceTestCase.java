@@ -1,7 +1,7 @@
-package com.itheima.service;
+package com.aurora.service;
 
-import com.itheima.config.SpringConfig;
-import com.itheima.domain.Account;
+import com.aurora.config.SpringConfig;
+import com.aurora.domain.Account;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

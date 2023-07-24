@@ -1,6 +1,6 @@
-package com.itheima.dao;
+package com.aurora.dao;
 
-import com.itheima.domain.Account;
+import com.aurora.domain.Account;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;

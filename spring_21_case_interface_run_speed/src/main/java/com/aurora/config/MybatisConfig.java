@@ -1,4 +1,4 @@
-package com.itheima.config;
+package com.aurora.config;
 
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;

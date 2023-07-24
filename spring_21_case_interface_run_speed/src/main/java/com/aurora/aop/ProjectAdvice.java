@@ -1,4 +1,4 @@
-package com.itheima.aop;
+package com.aurora.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class ProjectAdvice {
     //匹配业务层的所有方法
-    @Pointcut("execution(* com.itheima.service.*Service.*(..))")
+    @Pointcut("execution(* com.aurora.service.*Service.*(..))")
     private void servicePt(){}
 
     //设置环绕通知，在原始操作的运行前后记录执行时间
