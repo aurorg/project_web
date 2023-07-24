@@ -17,7 +17,7 @@ public class UserController {
 
     @RequestMapping("/delete")
     @ResponseBody
-    public String save1(){
+    public String delete(){
         System.out.println("user delete ...");
         return "{'module':'user delete'}";
     }
