@@ -17,6 +17,7 @@ public class ProjectAdvice {
     //设置环绕通知，在原始操作的运行前后记录执行时间
     @Around("ProjectAdvice.servicePt()")
     public void runSpeed(ProceedingJoinPoint pjp) throws Throwable {
+
         //获取执行的签名对象
         Signature signature = pjp.getSignature();
         String className = signature.getDeclaringTypeName();
@@ -27,6 +28,7 @@ public class ProjectAdvice {
            pjp.proceed();
         }
         long end = System.currentTimeMillis();
+
         System.out.println("万次执行："+ className+"."+methodName+"---->" +(end-start) + "ms");
     }
 
