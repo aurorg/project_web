@@ -9,6 +9,8 @@
     <version>1.0-RELEASE</version>
     <packaging>pom</packaging>
 
+
+
     <!--设置管理的模块名称-->
     <modules>
         <module>../maven_02_ssm</module>
