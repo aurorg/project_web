@@ -28,6 +28,7 @@ public class JdbcConfig {
         return dataSource;
     }
 
+    //平台事务管理器
     @Bean
     public PlatformTransactionManager transactionManager(DataSource dataSource){
         DataSourceTransactionManager ds = new DataSourceTransactionManager();

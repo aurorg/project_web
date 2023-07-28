@@ -5,9 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.itheima</groupId>
-  <artifactId>springmvc_09_result</artifactId>
+  <artifactId>springmvc_08_ssm</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
 
   <dependencies>
     <dependency>
