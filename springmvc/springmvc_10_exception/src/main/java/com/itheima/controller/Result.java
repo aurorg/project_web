@@ -5,18 +5,21 @@ public class Result {
     private Integer code;
     private String msg;
 
-    public Result() {
-    }
+    //构造方法
 
-    public Result(Integer code,Object data) {
-        this.data = data;
-        this.code = code;
-    }
 
-    public Result(Integer code, Object data, String msg) {
+    public Result(Integer code , Object data, String msg) {
         this.data = data;
         this.code = code;
         this.msg = msg;
+    }
+
+    public Result(Integer code , Object data) {
+        this.data = data;
+        this.code = code;
+    }
+
+    public Result() {
     }
 
     public Object getData() {

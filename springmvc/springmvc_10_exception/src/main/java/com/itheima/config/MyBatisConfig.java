@@ -11,15 +11,16 @@ public class MyBatisConfig {
     @Bean
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource){
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
-        factoryBean.setDataSource(dataSource);
+        factoryBean.setDataSource(dataSource); //记得参数加datasouce
         factoryBean.setTypeAliasesPackage("com.itheima.domain");
         return factoryBean;
     }
 
+    //扫描dao包
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer msc = new MapperScannerConfigurer();
-        msc.setBasePackage("com.itheima.dao");
+        msc.setBasePackage("com.itheima.dao"); //指定映射
         return msc;
     }
 

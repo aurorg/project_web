@@ -20,9 +20,9 @@ public interface BookDao {
     @Delete("delete from tbl_book where id = #{id}")
     public void delete(Integer id);
 
-    @Select("select * from tbl_book where id = #{id}")
+    @Select(" select * from ssm_db.tbl_book where id=#{id}")
     public Book getById(Integer id);
 
-    @Select("select * from tbl_book")
+    @Select(" select * from ssm_db.tbl_book ")
     public List<Book> getAll();
 }
