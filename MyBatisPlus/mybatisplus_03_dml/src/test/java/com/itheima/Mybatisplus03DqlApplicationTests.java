@@ -56,7 +56,7 @@ class Mybatisplus03DqlApplicationTests {
 //        user.setVersion(1);
 //        userDao.updateById(user);
 
-//        //1.先通过要修改的数据id将当前数据查询出来
+        //1.先通过要修改的数据id将当前数据查询出来
 //        User user = userDao.selectById(3L);
 //        //2.将要修改的属性逐一设置进去
 //        user.setName("Jock888");
@@ -75,7 +75,7 @@ class Mybatisplus03DqlApplicationTests {
 
         user.setName("Jock bbb");
         userDao.updateById(user);               //verion=3?条件还成立吗？
-
-    }
+//
+   }
 
 }

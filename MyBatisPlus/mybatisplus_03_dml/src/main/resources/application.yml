@@ -12,14 +12,13 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#  global-config:
-#    banner: false
-#    db-config:
-#      id-type: assign_id
-#      table-prefix: tbl_
-#      # 逻辑删除字段名
-#      logic-delete-field: deleted
-#      # 逻辑删除字面值：未删除为0
-#      logic-not-delete-value: 0
-#      # 逻辑删除字面值：删除为1
-#      logic-delete-value: 1
+  global-config:
+    banner: false
+    db-config:
+      id-type: assign_id
+      # 逻辑删除字段名
+      logic-delete-field: deleted
+      # 逻辑删除字面值：未删除为0
+      logic-not-delete-value: 0
+      # 逻辑删除字面值：删除为1
+      logic-delete-value: 1
