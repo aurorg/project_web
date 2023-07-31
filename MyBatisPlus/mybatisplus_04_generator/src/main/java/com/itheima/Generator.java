@@ -6,14 +6,13 @@ import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 public class Generator {
     public static void main(String[] args) {
         AutoGenerator autoGenerator = new AutoGenerator();
+        DataSourceConfig datsource = new DataSourceConfig();
+        datsource.setDriverName("com.mysql.cj.jdbc.Driver");
+        datsource.setUrl("jdbc:mysql://localhost:3306/mybatisplus_db?serverTimezone=UTC");
+        datsource.setUsername("root");
+        datsource.setPassword("szl0905");
 
-        DataSourceConfig dataSource = new DataSourceConfig();
-        dataSource.setDriverName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/mybatisplus_db?serverTimezone=UTC");
-        dataSource.setUsername("root");
-        dataSource.setPassword("root");
-        autoGenerator.setDataSource(dataSource);
-
+        autoGenerator.setDataSource(datsource);
         autoGenerator.execute();
     }
 }

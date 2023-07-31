@@ -1,6 +1,6 @@
-package com.aaa.service;
+package com.baomidou.service;
 
-import com.aaa.domain.User;
+import com.baomidou.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author 黑马程序员
- * @since 2021-06-15
+ * @author ${author}
+ * @since 2023-07-31
  */
 public interface IUserService extends IService<User> {
 
