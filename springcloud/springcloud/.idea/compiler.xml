@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="stock-nacos" />
+        <module name="order-nacos" />
         <module name="stock" />
         <module name="order" />
       </profile>
