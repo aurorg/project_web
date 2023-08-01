@@ -14,7 +14,7 @@ public class OrderApplication {
     }
 
     @Bean
-    @LoadBalanced   //负载均衡器
+    @LoadBalanced   //负载均衡器，不加负载均衡器，无法在nacos注册中心使用
     public RestTemplate restTemplate(RestTemplateBuilder builder){
         RestTemplate restTemplate =builder.build();
         return restTemplate;
