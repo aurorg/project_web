@@ -14,9 +14,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="order" options="-parameters" />
+      <module name="order" options="" />
       <module name="springcloud" options="-parameters" />
-      <module name="stock" options="-parameters" />
+      <module name="stock" options="" />
     </option>
   </component>
 </project>
