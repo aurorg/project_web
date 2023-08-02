@@ -12,6 +12,7 @@
         <module>order-loadbalancer</module>
         <module>order-openfeign</module>
         <module>product-nacos</module>
+        <module>config-nacos</module>
     </modules>
 
 <!--    <parent>-->

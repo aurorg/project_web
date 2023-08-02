@@ -10,6 +10,7 @@
         <module name="stock-nacos" />
         <module name="order-nacos" />
         <module name="order-openfeign" />
+        <module name="config-nacos" />
         <module name="stock" />
         <module name="product-nacos" />
         <module name="order" />

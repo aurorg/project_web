@@ -16,6 +16,7 @@ public class ProductController {
 
     @RequestMapping("/{id}")
     public String get(@PathVariable Integer id) throws InterruptedException {
+        Thread.sleep(4000);
         System.out.println("查询商品"+id);
         return "查询商品"+id+":"+port;
     }
