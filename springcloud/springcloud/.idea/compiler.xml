@@ -11,6 +11,7 @@
         <module name="order-nacos" />
         <module name="order-openfeign" />
         <module name="stock" />
+        <module name="product-nacos" />
         <module name="order" />
         <module name="order-ribbon" />
       </profile>
