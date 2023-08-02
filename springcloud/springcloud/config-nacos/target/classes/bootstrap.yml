@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: com.aurora.order
+
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8849
+      username: nacos
+      password: nacos
+      config:
+        namespace: public

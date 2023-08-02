@@ -1,0 +1,12 @@
+spring:
+  application:
+    #会自动根据服务名拉取dataid对应的配置文件，如果dataid和服务名不一致，就需要手动指定dataid
+    name: com.aurora.order
+
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8849
+      username: nacos
+      password: nacos
+      config:
+        namespace: public
