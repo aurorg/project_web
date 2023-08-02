@@ -9,6 +9,7 @@
         <module>order-nacos</module>
         <module>stock-nacos</module>
         <module>order-ribbon</module>
+        <module>order-loadbalancer</module>
     </modules>
 
 <!--    <parent>-->
