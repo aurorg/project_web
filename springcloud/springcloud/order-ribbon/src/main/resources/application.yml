@@ -1,13 +1,25 @@
 server:
-  port: 8020
+  port: 8030
 #应用名称（nacos会将该名称当做服务名称）
 spring:
   application:
     name: order-service
   cloud:
     nacos:
-      server-addr: 127.0.0.1:8847
+      server-addr: 127.0.0.1:8849
       discovery:
         username: nacos
         password: nacos
         namespace: public
+
+stock-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.aurora.ribbon.rule.CustomRule
+ribbon:
+  eager-load:
+    # 开启ribbon饥饿状态
+    enabled: true
+    # 配置stock-service的饥饿加载，多个使用逗号分隔
+    clients: stock-service
+
+
