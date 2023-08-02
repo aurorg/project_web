@@ -1,5 +1,6 @@
 package com.aurora.order.controller;
 
+import com.aurora.order.feign.ProductFeignService;
 import com.aurora.order.feign.StockFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,11 +14,17 @@ public class OrderController {
     @Autowired
     StockFeignService stockFeignService;
 
+    @Autowired
+    ProductFeignService productFeignService;
+
     @RequestMapping("/add")
     public String add(){
         System.out.println("下单成功！");
-        String msg=stockFeignService.reduct();
-        return "hello Feign!" +msg  ;
+        String s=stockFeignService.reduct();
+
+
+        String p= productFeignService.get(1);
+        return "hello Feign!" +s +p  ;
     }
 
 }
