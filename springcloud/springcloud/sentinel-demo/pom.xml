@@ -35,7 +35,7 @@
             <version>1.18.18</version>
         </dependency>
 
-        <!--如果要使用@SentinelResource-->
+        <!--@SentinelResource-->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-annotation-aspectj</artifactId>
