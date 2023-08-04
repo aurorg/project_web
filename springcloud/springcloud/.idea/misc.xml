@@ -5,7 +5,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/order-sentinel/pom.xml" />
         <option value="$PROJECT_DIR$/sentinel-demo/pom.xml" />
       </list>
     </option>

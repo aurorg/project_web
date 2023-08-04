@@ -1,34 +1,9 @@
 server:
-  port: 8040
-#应用名称（nacos会将该名称当做服务名称）
+  port: 8861
 spring:
   application:
-    name: order-service
+    name: order-sentinel
   cloud:
-    nacos:
-      server-addr: 127.0.0.1:8849
-      discovery:
-        username: nacos
-        password: nacos
-        namespace: public
-
-
-#springboot默认的日志级别是info，feign的dubug日志级别就不会输入
-
-logging:
-  level:
-    com.aurora.order.feign: debug
-
-##feign日志局部配置
-#feign:
-#  client:
-#    config:
-#      product-service:
-#        logger-level: BASIC
-         contract: feign.Contract.Default
-         #连接超时时间
-         connectTimeout: 5000
-         #请求处理超时时间
-         readTimeout : 3000
-         requestInterceptors[0]:
-           com.aurora.order.intercptor.feign.CustomFeignInterceptor
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
