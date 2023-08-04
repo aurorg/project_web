@@ -6,22 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="order-sentinel" />
+        <module name="sentinel-demo" />
         <module name="order-loadbalancer" />
         <module name="stock-nacos" />
         <module name="order-nacos" />
-        <module name="order-openfeign" />
         <module name="config-nacos" />
+        <module name="order-openfeign" />
         <module name="stock" />
         <module name="product-nacos" />
         <module name="order" />
         <module name="order-ribbon" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="sentinel_demo" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="order" options="" />
+      <module name="sentinel_demo" options="-parameters" />
       <module name="springcloud" options="-parameters" />
       <module name="stock" options="" />
     </option>
