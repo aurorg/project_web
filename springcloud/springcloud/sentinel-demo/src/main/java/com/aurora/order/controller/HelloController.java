@@ -1,6 +1,5 @@
 package com.aurora.order.controller;
 
-
 import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.EntryType;
 import com.alibaba.csp.sentinel.SphU;
@@ -39,7 +38,7 @@ public class HelloController {
             // 1.sentinel针对资源进行限制的
             entry = SphU.entry(RESOURCE_NAME);
             // 被保护的业务逻辑
-            String str = "hello world";
+            String str = "hello world!!!!!!";
             log.info("====="+str+"=====");
             return str;
         } catch (BlockException e1) {
@@ -64,7 +63,7 @@ public class HelloController {
      *
      * spring 的初始化方法
      */
-    @PostConstruct  //
+    @PostConstruct  //生命周期回调方法
     private static void initFlowRules(){
 
         // 流控规则
