@@ -117,8 +117,8 @@ public class HelloController {
 
         // 熔断持续时长 ： 单位 秒
         // 一旦触发了熔断， 再次请求对应的接口就会直接调用  降级方法。
-        // 10秒过了后——半开状态： 恢复接口请求调用， 如果第一次请求就异常， 再次熔断，不会根据设置的条件进行判定
-        degradeRule.setTimeWindow(10);
+        // 10秒过了后----半开状态： 恢复接口请求调用， 如果第一次请求就异常， 再次熔断，不会根据设置的条件进行判定
+        degradeRule.setTimeWindow(10);   //这个时间内的窗口都进行降级处理
 
 
         degradeRules.add(degradeRule);
@@ -142,7 +142,7 @@ public class HelloController {
 
     /**
      * @SentinelResource 改善接口中资源定义和被流控降级后的处理方法
-     * 怎么使用： 1.添加依赖<artifactId>sentinel-annotation-aspectj</artifactId>
+     * 使用：    1.添加依赖<artifactId>sentinel-annotation-aspectj</artifactId>
      *          2.配置bean——SentinelResourceAspect
      *   value  定义资源
      *   blockHandler 设置 流控降级后的处理方法（默认该方法必须声明在同一个类）
@@ -160,8 +160,8 @@ public class HelloController {
             /*exceptionsToIgnore = {ArithmeticException.class},*/
             /*blockHandlerClass = User.class,*/ blockHandler = "blockHandlerForGetUser")
     public User getUser(String id) {
-        int a=1/0;
-        return new User("xushu");
+//        int a=1/0;
+        return new User("aurora");
     }
 
     public User fallbackHandleForGetUser(String id,Throwable e) {
