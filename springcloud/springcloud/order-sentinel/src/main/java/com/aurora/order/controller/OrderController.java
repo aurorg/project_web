@@ -20,7 +20,7 @@ public class OrderController {
     }
 
     @RequestMapping("/flow")
-    @SentinelResource(value="flow",blockHandler = "flowBlockHandler")
+   // @SentinelResource(value="flow",blockHandler = "flowBlockHandler")
     public String flow() throws InterruptedException{
      return "正常访问";
     }
