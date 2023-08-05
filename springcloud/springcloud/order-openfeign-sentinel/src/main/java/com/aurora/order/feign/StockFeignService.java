@@ -10,7 +10,7 @@ name 指定调用rest接口所对应的服务名
 path 指定调用rest接口所在的StockController指定的@RequestMapping
  */
 
-@FeignClient(value = "stock-nacos",path="/stock")
+@FeignClient(value = "stock-nacos",path="/stock",fallback = StockFeignServiceFallback.class)
 public interface StockFeignService {
 
     @RequestMapping("/reduct")

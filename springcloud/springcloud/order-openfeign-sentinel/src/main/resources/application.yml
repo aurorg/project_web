@@ -11,6 +11,10 @@ spring:
         username: nacos
         password: nacos
         namespace: public
+feign:
+  sentinel:
+    #openfeign 整合sentinel
+    enabled: true
 
 
 
