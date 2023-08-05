@@ -63,5 +63,11 @@ public class OrderController {
         return orderService.getUser();
     }
 
+    @RequestMapping("/err")
+    public String err(){
+        int a=1/0;
+        return "hello error!";
+    }
+
 
 }

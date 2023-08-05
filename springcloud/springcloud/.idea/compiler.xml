@@ -11,6 +11,7 @@
         <module name="sentinel-demo" />
         <module name="stock-nacos" />
         <module name="order-nacos" />
+        <module name="order-openfeign-sentinel" />
         <module name="config-nacos" />
         <module name="order-openfeign" />
         <module name="stock" />
