@@ -7,15 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="order-sentinel" />
+        <module name="order-nacos" />
+        <module name="product-nacos" />
         <module name="order-loadbalancer" />
         <module name="sentinel-demo" />
         <module name="stock-nacos" />
-        <module name="order-nacos" />
         <module name="order-openfeign-sentinel" />
         <module name="config-nacos" />
         <module name="order-openfeign" />
         <module name="stock" />
-        <module name="product-nacos" />
+        <module name="gateway" />
         <module name="order" />
         <module name="order-ribbon" />
       </profile>

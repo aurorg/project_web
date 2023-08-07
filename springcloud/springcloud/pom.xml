@@ -15,7 +15,7 @@
         <module>config-nacos</module>
         <module>order-sentinel</module>
         <module>order-openfeign-sentinel</module>
-
+        <module>gateway</module>
 
 
     </modules>

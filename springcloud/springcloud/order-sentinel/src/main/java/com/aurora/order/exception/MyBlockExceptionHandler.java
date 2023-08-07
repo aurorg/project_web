@@ -27,7 +27,7 @@ public class MyBlockExceptionHandler implements BlockExceptionHandler {
         // getRule() 资源  规则的详细信息
         log.info("BlockExceptionHandler BlockException================"+e.getRule());
 
-        
+
         Result r = null;
 
         if (e instanceof FlowException) {
