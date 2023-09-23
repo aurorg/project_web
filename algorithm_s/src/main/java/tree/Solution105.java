@@ -4,13 +4,14 @@ import java.util.*;
 
 class Solution {
     // 存储 inorder 中值到索引的映射
-    HashMap<Integer, Integer> valToIndex = new HashMap<>();
+    HashMap<Integer, Integer> valToIndex = new HashMap<>();  //存储 inorder 数组中每个元素的值到其对应索引的映射关系
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         for (int i = 0; i < inorder.length; i++) {
             valToIndex.put(inorder[i], i);
         }
-        return build(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+        return build(preorder, 0, preorder.length - 1,
+                inorder, 0, inorder.length - 1);
     }
 
     /*
@@ -18,7 +19,8 @@ class Solution {
        中序遍历数组为 inorder[inStart..inEnd]，
        构造这个二叉树并返回该二叉树的根节点
     */
-    TreeNode build(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd) {
+    TreeNode build(int[] preorder, int preStart, int preEnd,
+                   int[] inorder, int inStart, int inEnd) {
         if (preStart > preEnd) {
             return null;
         }
@@ -34,8 +36,10 @@ class Solution {
         TreeNode root = new TreeNode(rootVal);
 
         // 递归构造左右子树
-        root.left = build(preorder, preStart + 1, preStart + leftSize, inorder, inStart, index - 1);
-        root.right = build(preorder, preStart + leftSize + 1, preEnd, inorder, index + 1, inEnd);
+        root.left = build(preorder, preStart + 1, preStart + leftSize,
+                inorder, inStart, index - 1);
+        root.right = build(preorder, preStart + leftSize + 1, preEnd,
+                inorder, index + 1, inEnd);
         return root;
     }
 
