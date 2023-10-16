@@ -1,0 +1,26 @@
+server:
+  port: 8033
+  servlet:
+    context-path: /example
+
+spring:
+  application:
+    name: message-service
+  profiles:
+    active: dev
+  dynamic:
+    thread-pool:
+      nacos:
+        data-id: hippo4j-nacos.yaml
+        group: DEFAULT_GROUP
+      config-file-type: yml
+  cloud:
+    nacos:
+      config:
+        extension-configs:
+          - data-id: hippo4j-nacos.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+        password: nacos
+        server-addr: 127.0.0.1:8848
+        username: nacos
